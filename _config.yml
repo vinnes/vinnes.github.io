@@ -1,0 +1,134 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+locale                   : "it-IT"
+title                    : vinnes
+email                    : vincenzo.nesta@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+ Il primo blog di Vincenzo Nesta. Tecnico del risparmio energetico, appassionato di tecnologia, sviluppatore web. 
+baseurl                   : "" # the subpath of your site, e.g. /blog
+url                       : "https://vinnes.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+repository                : vinnes/vinnes.github.io # add a repository: username/repo-name key to your _config.yml file:
+twitter_username          : vinnes
+github_username           :  vinnes
+linkedin_username         : vinnes
+words_per_minute          : 200
+# Comments
+# To enable comments, set the `enabled` field to true and supply either a Disqus short name or a Jekyll comments receiver
+comments:
+  enabled: true
+  show_count: true
+  provider                : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname             : "vinnes-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+
+# GitHub Help https://help.github.com/en/articles/configuring-jekyll
+
+github: [metadata]
+encoding: UTF-8
+kramdown:
+  input: GFM
+  hard_wrap: false
+future: true
+jailed: false
+gfm_quirks: paragraph_end
+
+# Custom dir for images
+post-images: "/images/post-images"
+
+# Build settings
+markdown: kramdown
+
+# Theme Settings
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+
+minimal_mistakes_skin: "contrast" # "dark", "air", "aqua", "default" , "dirt", "neon", "mint", "plum" "sunrise"
+
+# configure pagination in _config.yml.
+
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
+# Plugins
+
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate-v2
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Posts Settings
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+# Search Settings
+
+search: true
+search_full_content: true
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 3
+  offset: 2
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Site Author
+author:
+  name             : "Vincenzo Nesta"
+  avatar           : "/images/Foto_profilo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Geometra, tecnico del risparmio energetico"
+  location         : "Empoli, FI, Italia"
+  email            : "vincenzo.nesta@gmail.com"
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/vinnes"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/vinnes"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/vinnes"
