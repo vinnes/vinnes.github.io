@@ -34,3 +34,6 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 # New jekyll-paginate-v2
 gem 'jekyll-paginate-v2', '~> 2.0'
 
+# Jekyll Sitemap Generator Plugin
+gem 'jekyll-sitemap'
+

@@ -22,7 +22,7 @@ baseurl                   : "" # the subpath of your site, e.g. /blog
 url                       : "https://vinnes.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 repository                : vinnes/vinnes.github.io # add a repository: username/repo-name key to your _config.yml file:
 twitter_username          : vinnes
-github_username           :  vinnes
+github_username           : vinnes
 linkedin_username         : vinnes
 words_per_minute          : 200
 # Comments
@@ -57,7 +57,7 @@ markdown: kramdown
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+# remote_theme         : "mmistakes/minimal-mistakes"
 
 minimal_mistakes_skin: "contrast" # "dark", "air", "aqua", "default" , "dirt", "neon", "mint", "plum" "sunrise"
 
@@ -72,6 +72,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-paginate-v2
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
