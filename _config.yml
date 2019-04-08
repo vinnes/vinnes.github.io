@@ -56,8 +56,9 @@ markdown: kramdown
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                  : "minimal-mistakes-jekyll"
-# remote_theme         : "mmistakes/minimal-mistakes"
+# Choose local gem theme or remote
+#theme                  : "minimal-mistakes-jekyll"
+remote_theme         : "mmistakes/minimal-mistakes"
 
 minimal_mistakes_skin: "contrast" # "dark", "air", "aqua", "default" , "dirt", "neon", "mint", "plum" "sunrise"
 
@@ -73,6 +74,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-paginate-v2
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

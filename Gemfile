@@ -37,3 +37,6 @@ gem 'jekyll-paginate-v2', '~> 2.0'
 # Jekyll Sitemap Generator Plugin
 gem 'jekyll-sitemap'
 
+# Jekyll plugin for building Jekyll sites with any public GitHub-hosted theme
+gem 'jekyll-remote-theme'
+
