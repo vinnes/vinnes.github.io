@@ -24,7 +24,7 @@ repository                : vinnes/vinnes.github.io # add a repository: username
 twitter_username          : vinnes
 github_username           : vinnes
 linkedin_username         : vinnes
-words_per_minute          : 200
+words_per_minute          : 150 
 # Comments
 # To enable comments, set the `enabled` field to true and supply either a Disqus short name or a Jekyll comments receiver
 comments:
@@ -35,7 +35,6 @@ comments:
     shortname             : "vinnes-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
 
 # GitHub Help https://help.github.com/en/articles/configuring-jekyll
-
 github: [metadata]
 encoding: UTF-8
 kramdown:
@@ -45,8 +44,11 @@ future: true
 jailed: false
 gfm_quirks: paragraph_end
 
+# Prmalinks
+permalink: /:categories/:year/:month/:day/:title/
+
 # Custom dir for images
-post-images: "/images/post-images"
+post-images: "/assets/images/post-images"
 
 # Build settings
 markdown: kramdown
@@ -60,15 +62,19 @@ markdown: kramdown
 #theme                  : "minimal-mistakes-jekyll"
 remote_theme         : "mmistakes/minimal-mistakes"
 
-minimal_mistakes_skin: "contrast" # "dark", "air", "aqua", "default" , "dirt", "neon", "mint", "plum" "sunrise"
+minimal_mistakes_skin: "sunrise" # "dark", "air", "aqua", "default" , "dirt", "neon", "mint", "plum" "sunrise"
+
+#logo
+logo: "/assets/images/logo.png" # path of logo image, e.g. "/assets/images/logo.png"
+
+#formato date
+date_format: "%B %-d %Y"
 
 # configure pagination in _config.yml.
-
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 
 # Plugins
-
 plugins:
   - jekyll-feed
   - jekyll-include-cache
@@ -101,11 +107,15 @@ defaults:
       comments: true
       share: true
       related: true
+      show_date: true
 
 # Search Settings
 
 search: true
 search_full_content: true
+lunr:
+  search_within_pages: true
+
 
 # Pagination Settings
 pagination:
@@ -121,9 +131,9 @@ pagination:
 # Site Author
 author:
   name             : "Vincenzo Nesta"
-  avatar           : "/images/Foto_profilo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/Foto_profilo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Geometra, tecnico del risparmio energetico"
-  location         : "Empoli, FI, Italia"
+  location         : "Livorno, Italia"
   email            : "vincenzo.nesta@gmail.com"
   links:
     - label: "Twitter"
